@@ -12,7 +12,9 @@ In short pfSense is a Firewall/Router combo. A short baseline for each of these 
 
 ### Firewalls
 
-A**FIREWALL** is something that controlls traffic TO a given network. It does this with simple/complex rules system. *Allow* this traffic and *deny* that traffic. Rules typically looks like this in raw form:
+![image](https://user-images.githubusercontent.com/72173919/210431685-1e35d615-3b22-497e-8b05-cd61e6f5cf5b.png)
+
+A **FIREWALL** is something that controls traffic *TO* a given network. It does this with simple/complex rules system. *Allow* this traffic and *deny* that traffic. Rules typically looks like this in raw form:
 
 ```EXAMPLE
 TO              ACTION       FROM
@@ -21,8 +23,6 @@ TO              ACTION       FROM
 172.168.5.24    DENY         172.168.5.23
 172.168.5.1     ALLOW        ANYWHERE
 ```
-
-![image](https://user-images.githubusercontent.com/72173919/210431685-1e35d615-3b22-497e-8b05-cd61e6f5cf5b.png)
 
 
 In the first example, we're saying to deny access (don't send packets) to the IP of 172.168.5.3 on port 22 from ANYWHERE (any IP address). Its important to understand that Firewalls don't typically stop traffic from getting **out** of your network or subdomain, but normally from getting **in**.
@@ -34,12 +34,17 @@ Three key concepts to understand with Firewalls:
 
 ### Routers
 
-You already know what this is! You have one at home most likely that you've heard called a modem or router. In reality it's probably a Modem and Router combo! We won't talk about modems, but a router in concept is simple: route traffic from point A to point B and handle all the questions that come up like "Where exactly IS point B???". pfSense can also act as a router, building an understanding of what is where on your network and then forwarding traffic to the correct destinations.
+You already know what this is! You have one at home most likely, which you've heard called a modem or router. In reality it's probably a Modem and Router combo! We won't talk about modems, but a router in concept is simple: route traffic from point A to point B and handle all the questions that come up like "Where exactly IS point B???". pfSense can also act as a router, building an understanding of what is where on your network and then forwarding traffic to the correct destinations.
 
 ![image](https://user-images.githubusercontent.com/72173919/210431866-68cf0095-da3f-4b4f-b06d-e64acbe9df02.png)
 
 Routing large networks can be complicated but you'll need to understand a few aspects of routing:
-1. Subdomains
-2. VLANS
-3. 
+1. VLANS
+2. Zones/Broadcast domains
+3. Areas
+
+### VLANS
+Virtual Local Area Network
+
+
 
