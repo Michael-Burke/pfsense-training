@@ -1,6 +1,6 @@
 # pfSense Training
 
-## What is pfSense? The basics of Firewalls
+## What is pfSense?
 
 According to pfSense website:
 
@@ -8,9 +8,33 @@ According to pfSense website:
 
 > pfSense software includes a web interface for the configuration of all included components. There is no need for any UNIX knowledge, no need to use the command line for anything, and no need to ever manually edit any rule sets. Users familiar with commercial firewalls catch on to the web interface quickly, though there can be a learning curve for users not familiar with commercial-grade firewalls.
 
-In short pfSense is a Firewall/Router combo. A short baseline for each of these is laid out below.
+In short pfSense is a Firewall/Router/DNS combo. A short baseline for each of these is laid out below.
 
-### Firewalls
+We'll touch on the following:
+
+1. Terminology
+2. Routing/Routers
+3. Firewalls
+5. DNS Resolver
+6. VLANs
+
+Learn more [at pfSense official documentation!](https://docs.netgate.com/pfsense/en/latest/)
+
+## Terminology
+
+- **Interface:** this is a physical or logical connection or port. On a switch, the ports are called "**interfaces**"
+- **VLANS:** this is Virtual Local Area Network(s).
+    
+> VLANs work by applying tags to network frames and handling these tags in networking systems – creating the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. In this way, VLANs can keep network applications separate despite being connected to the same physical network, and without requiring multiple sets of cabling and networking devices to be deployed.
+
+## Routers/Routing
+
+
+![image](https://user-images.githubusercontent.com/72173919/210431866-68cf0095-da3f-4b4f-b06d-e64acbe9df02.png)
+
+You already know what this is! You have one at home most likely, which you've heard called a modem or router. In reality it's probably a Modem **and** Router combo! We won't talk about modems, but a router in concept is simple: route traffic from point A to point B and handle all the questions that come up like "*Where exactly IS point B?*". pfSense can also act as a router, building an understanding of what is where on your network and then forwarding traffic to the correct destinations.
+
+## Firewalls
 
 ![image](https://user-images.githubusercontent.com/72173919/210431685-1e35d615-3b22-497e-8b05-cd61e6f5cf5b.png)
 
@@ -32,16 +56,13 @@ Three key concepts to understand with Firewalls:
 2. Deny actually drops and destroys traffic (packets) that evaluate to true like the first and second example above
 3. A **FIREWALL** doesn't ROUTE traffic. It isn't responsible for forwarding or sending packets to their desired endpoint, they simply evaluate if any rules are being broken and punishes the offending packets by destorying them (dropping them).
 
-### Routers
 
-You already know what this is! You have one at home most likely, which you've heard called a modem or router. In reality it's probably a Modem and Router combo! We won't talk about modems, but a router in concept is simple: route traffic from point A to point B and handle all the questions that come up like "Where exactly IS point B???". pfSense can also act as a router, building an understanding of what is where on your network and then forwarding traffic to the correct destinations.
 
-![image](https://user-images.githubusercontent.com/72173919/210431866-68cf0095-da3f-4b4f-b06d-e64acbe9df02.png)
+## DNS and DNS Resolver
 
-Routing large networks can be complicated but you'll need to understand a few aspects of routing:
-1. VLANS
-2. Zones/Broadcast domains
-3. Areas
+
+The Domain Name System (DNS) is a hierarchical and distributed naming system for computers, services, and other resources in the Internet or other Internet Protocol networks. It associates various information with domain names assigned to each of the associated entities. An example is `8.8.8.8 == www.google.com`
+
 
 ### VLANS
 Virtual Local Area Network
