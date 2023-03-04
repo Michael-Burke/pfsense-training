@@ -1,0 +1,1 @@
+Please see the pfsense-training.md for the training module.

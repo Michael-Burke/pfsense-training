@@ -4,6 +4,8 @@
 
 ![image](./images/firewall2.jpg)
 
+You can access the training range at https://badgerwall.burketech.us/
+
 ## Ground Rules
 
 > **DON'T BREAK THE TRAINING ENVIRONMENT**
@@ -99,6 +101,10 @@ VLANs enable a switch to carry multiple discrete broadcast domains, allowing a s
 You reach VLANs in pfSense navigating to `Interfaces/Assignments/VLANs`
 
 Give example here on steps to change interface IP and VLAN tag as well
+
+## Closing Remarks
+
+
 
 
 
